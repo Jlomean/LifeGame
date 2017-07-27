@@ -1,0 +1,27 @@
+.alive {
+	background-color : black;
+}
+
+.dead {
+	background-color: white;
+}
+
+#terrain {
+	display: flex;
+	flex-direction: column;
+	margin-right: 2em;
+}
+
+.cell {
+	width: 30px;
+	height: 30px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+input {
+	max-width: 3em;
+}
