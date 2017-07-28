@@ -1,5 +1,7 @@
 var rowCount = 15;
 var colCount = 15;
+var gameArray = [];
+var neighbours = [];
 
 function generate() {
 	var rows = document.getElementById('rows').value;
@@ -7,6 +9,8 @@ function generate() {
 	var cols = document.getElementById('cols').value;
 	colCount = cols;
 	document.getElementById('terrain').innerHTML = '';
+	gameArray=[];
+	neighbours=[];
 	createTable();
 }
 
@@ -29,11 +33,24 @@ function createTable() {
 			var deadOrAlive = Math.round(Math.random());
 			if (deadOrAlive == 1) {
 				cell.className += 'alive';
+				gameArray.push(true);
 			}
 			else {
 				cell.className += 'dead';
+				gameArray.push(false);
 			}
 			cell.className += ' cell';
+		}
+	}
+}
+
+function life() {
+	for (i=0; i<gameArray.length;i++) {
+		if (gameArray[i]=true) {
+			
+		}
+		else if (gameArray[i]=false) {
+			
 		}
 	}
 }
